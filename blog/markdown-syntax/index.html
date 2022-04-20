@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;hunterbaxter.xyz&#x2F;main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster+Two">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans">
+  <title>Hunter Baxter</title>
+</head>
+<body>
+  
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <!--  don't know if container fluid looks better or not -->
+  <div class="container">
+      <a class="navbar-brand" href="/"><b>Hunter Baxter</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-2"> -->
+      <ul class="navbar-nav ms-auto">
+        <!-- <li><a href="/about/"> about </a></li> -->
+        <li class="navbar-item"><a class="nav-link" href="/about/"> about </a></li>
+        <li class="navbar-item"><a class="nav-link" href="/blog/"> blog </a></li>
+        <li class="navbar-item"><a class="nav-link" href="/contact/"> contact </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <section class="section">
+    <div class="container">
+      
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-10 col-xxl-8">
+        <article>
+          <div class="blog-header">
+            <h1> Markdown Syntax Guide </h1>
+            
+<p><small>
+    Posted 2022-04-13
+    <!-- &nbsp;&hyphen;&nbsp; -->
+    &middot;
+    <strong>
+        <!-- 3&nbsp;minute read -->
+        3 minute read
+    </strong>
+</small><p>
+
+          </div>
+          
+
+<!-- use accordion-flush to get rid of border -->
+<div class="accordion" id="accordionToc">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingToc">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseToc" aria-expanded="false" aria-controls="collapseToc">
+        Table of Contents
+      </button>
+    </h2>
+    <div id="collapseToc" class="accordion-collapse collapse" aria-labelledby="headingToc" data-bs-parent="#accordionToc">
+      <div class="accordion-body">
+        
+          <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#headings"> Headings</a></li>
+    	  
+    	  
+          <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#h1"> H1</a></li>
+    	  
+    	  <ul>
+    	    
+    	    <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#h2">H2</a></li>
+    	    
+    	  </ul>
+    	  
+    	  
+          <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#paragraph"> Paragraph</a></li>
+    	  
+    	  
+          <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#blockquotes"> Blockquotes</a></li>
+    	  
+    	  <ul>
+    	    
+    	    <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#blockquote-without-attribution">Blockquote without attribution</a></li>
+    	    
+    	    <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#blockquote-with-attribution">Blockquote with attribution</a></li>
+    	    
+    	  </ul>
+    	  
+    	  
+          <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#tables"> Tables</a></li>
+    	  
+    	  <ul>
+    	    
+    	    <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#inline-markdown-within-tables">Inline Markdown within tables</a></li>
+    	    
+    	  </ul>
+    	  
+    	  
+          <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#code-blocks"> Code Blocks</a></li>
+    	  
+    	  <ul>
+    	    
+    	    <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#code-block-with-backticks">Code block with backticks</a></li>
+    	    
+    	    <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#code-block-indented-with-four-spaces">Code block indented with four spaces</a></li>
+    	    
+    	  </ul>
+    	  
+    	  
+          <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#list-types"> List Types</a></li>
+    	  
+    	  <ul>
+    	    
+    	    <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#ordered-list">Ordered List</a></li>
+    	    
+    	    <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#unordered-list">Unordered List</a></li>
+    	    
+    	    <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#nested-list">Nested list</a></li>
+    	    
+    	  </ul>
+    	  
+    	  
+          <li><a href="https://hunterbaxter.xyz/blog/markdown-syntax/#other-elements-abbr-sub-sup-kbd-mark"> Other Elements — abbr, sub, sup, kbd, mark</a></li>
+    	  
+    	  
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+          <h1 id="headings">Headings</h1>
+<p>The following HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> elements represent six levels of section
+headings. <code>&lt;h1&gt;</code> is the highest section level while <code>&lt;h6&gt;</code> is the lowest.</p>
+<h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<h1 id="paragraph">Paragraph</h1>
+<p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum,
+voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma
+dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as
+cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin
+porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur?
+Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit
+ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda
+veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore
+eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata
+tiustia prat.</p>
+<p>Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne
+sapicia is sinveli squiatum, core et que aut hariosam ex eat.</p>
+<h1 id="blockquotes">Blockquotes</h1>
+<p>The blockquote element represents content that is quoted from another source,
+optionally with a citation which must be within a <code>footer</code> or <code>cite</code> element,
+and optionally with in-line changes such as annotations and abbreviations.</p>
+<h3 id="blockquote-without-attribution">Blockquote without attribution</h3>
+<blockquote>
+<p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+<strong>Note</strong> that you can use <em>Markdown syntax</em> within a blockquote.</p>
+</blockquote>
+<h3 id="blockquote-with-attribution">Blockquote with attribution</h3>
+<blockquote>
+<p>Don't communicate by sharing memory, share memory by communicating.<br>
+— <cite>Rob Pike<sup class="footnote-reference"><a href="#1">1</a></sup></cite></p>
+</blockquote>
+<blockquote>
+<p>All men by nature desire to know.<br>
+― <cite>Aristotle<sup class="footnote-reference"><a href="#2">2</a></sup></cite></p>
+</blockquote>
+<h1 id="tables">Tables</h1>
+<p>Tables aren't part of the core Markdown spec, but Zola supports them
+out-of-the-box.</p>
+<table><thead><tr><th>Name</th><th>Age</th></tr></thead><tbody>
+<tr><td>Bob</td><td>27</td></tr>
+<tr><td>Alice</td><td>23</td></tr>
+</tbody></table>
+<h3 id="inline-markdown-within-tables">Inline Markdown within tables</h3>
+<table><thead><tr><th>Italics</th><th>Bold</th><th>Code</th></tr></thead><tbody>
+<tr><td><em>italics</em></td><td><strong>bold</strong></td><td><code>code</code></td></tr>
+</tbody></table>
+<h1 id="code-blocks">Code Blocks</h1>
+<h3 id="code-block-with-backticks">Code block with backticks</h3>
+<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Test&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="code-block-indented-with-four-spaces">Code block indented with four spaces</h3>
+<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Test&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h1 id="list-types">List Types</h1>
+<h3 id="ordered-list">Ordered List</h3>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<h3 id="unordered-list">Unordered List</h3>
+<ul>
+<li>List item</li>
+<li>Another item</li>
+<li>And another item</li>
+</ul>
+<h3 id="nested-list">Nested list</h3>
+<ul>
+<li>Fruit
+<ul>
+<li>Apple</li>
+<li>Orange</li>
+<li>Banana</li>
+</ul>
+</li>
+<li>Dairy
+<ul>
+<li>Milk</li>
+<li>Cheese</li>
+</ul>
+</li>
+</ul>
+<h1 id="other-elements-abbr-sub-sup-kbd-mark">Other Elements — abbr, sub, sup, kbd, mark</h1>
+<p><abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.</p>
+<p>H<sub>2</sub>O</p>
+<p>X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup></p>
+<p>Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the
+session.</p>
+<p>Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and
+other small creatures.</p>
+<hr />
+<!-- Note: There must be a blank line between every two lines of the footnote difinition.  -->
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>The above quote is excerpted from Rob Pike's <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk</a>
+during Gopherfest, November 18, 2015.</p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>The quote is the first sentence of Aristotle's <a href="http://classics.mit.edu/Aristotle/metaphysics.html">Metaphysics</a>.</p>
+</div>
+
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </section>
+  
+<footer class="footer text-muted mt-auto">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 order-last order-lg-first">
+				<ul class="list-inline">
+					<li class="list-inline-item">©2022 Hunter Baxter</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>
