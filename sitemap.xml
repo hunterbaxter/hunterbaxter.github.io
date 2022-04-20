@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://hunterbaxter.xyz/</loc>
+        <loc>https://hunterbaxter.github.io/</loc>
     </url>
     <url>
-        <loc>https://hunterbaxter.xyz/about/</loc>
+        <loc>https://hunterbaxter.github.io/about/</loc>
     </url>
     <url>
-        <loc>https://hunterbaxter.xyz/blog/</loc>
+        <loc>https://hunterbaxter.github.io/blog/</loc>
     </url>
     <url>
-        <loc>https://hunterbaxter.xyz/blog/markdown-syntax/</loc>
+        <loc>https://hunterbaxter.github.io/blog/markdown-syntax/</loc>
         <lastmod>2022-04-13T00:00:00+00:00</lastmod>
     </url>
     <url>
-        <loc>https://hunterbaxter.xyz/blog/math/</loc>
+        <loc>https://hunterbaxter.github.io/blog/math/</loc>
         <lastmod>2021-04-08T09:19:42+00:00</lastmod>
     </url>
     <url>
-        <loc>https://hunterbaxter.xyz/blog/page/1/</loc>
+        <loc>https://hunterbaxter.github.io/blog/page/1/</loc>
     </url>
     <url>
-        <loc>https://hunterbaxter.xyz/blog/website/</loc>
+        <loc>https://hunterbaxter.github.io/blog/website/</loc>
         <lastmod>2022-03-21</lastmod>
     </url>
     <url>
-        <loc>https://hunterbaxter.xyz/contact/</loc>
+        <loc>https://hunterbaxter.github.io/contact/</loc>
     </url>
 </urlset>
