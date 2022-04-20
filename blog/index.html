@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang=en>
 
+
+  
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;main.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster+Two">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans">
   <title>Hunter Baxter</title>
 </head>
 <body>
   
 <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
-<nav class="navbar navbar-expand-lg navbar-light">
+<!-- sm / lg / xl chagne when the navbar collapes -->
+<nav class="navbar navbar-expand-sm navbar-light">
   <!--  don't know if container fluid looks better or not -->
   <div class="container">
-      <a class="navbar-brand" href="/"><b>Hunter Baxter</b></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="/">Hunter Baxter</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="toggleMobileMenu">
       <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-2"> -->
-      <ul class="navbar-nav ms-auto">
-        <!-- <li><a href="/about/"> about </a></li> -->
+      <ul class="navbar-nav ms-auto text-center">
         <li class="navbar-item"><a class="nav-link" href="/about/"> about </a></li>
         <li class="navbar-item"><a class="nav-link" href="/blog/"> blog </a></li>
         <li class="navbar-item"><a class="nav-link" href="/contact/"> contact </a></li>
@@ -40,8 +40,8 @@
       
 <div class="container">
   <h1 class="text-center"> Blog </h1>
-  <p> <p>NOTE: All blog content has not been navigated over yet, this is just a test.
-TODO: implement tag filtering via taxonomies and what not</p>
+  <p> <p>Old blog content has NOT been navigated over yet because the site is still in design phase.</p>
+<p>TODO: implement tag filtering via taxonomies and what not</p>
  </p>
 </div>
 
@@ -54,18 +54,19 @@ TODO: implement tag filtering via taxonomies and what not</p>
             
             <div class="card">
               <div class="card-body">
-                <h2 class="h3"><a class="stretched-link text-body" href="https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;markdown-syntax&#x2F;">Markdown Syntax Guide</a></h2>
+                <a class="stretched-link text-body" href="https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;markdown-syntax&#x2F;">Markdown Syntax Guide</a>
                 
-                  <p class="lead">This article offers a sample of basic Markdown syntax that can be used in Zola content files, also it shows whether basic HTML elements are decorated with CSS in a Zola theme.</p>
+                  <p>Markdown Syntax Examples</p>
+                
                 
 <p><small>
+    
+    Updated 2022-04-13
+    &middot;
+    
     Posted 2022-04-13
-    <!-- &nbsp;&hyphen;&nbsp; -->
     &middot;
-    <strong>
-        <!-- 3&nbsp;minute read -->
-        3 minute read
-    </strong>
+    3 minute read
 </small><p>
 
               </div>
@@ -73,17 +74,34 @@ TODO: implement tag filtering via taxonomies and what not</p>
             
             <div class="card">
               <div class="card-body">
-                <h2 class="h3"><a class="stretched-link text-body" href="https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;website&#x2F;">Designing a personal website</a></h2>
+                <a class="stretched-link text-body" href="https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;code&#x2F;">Code Snippets</a>
                 
                 
 <p><small>
+    
+    Posted 2022-04-08
+    &middot;
+    1 minute read
+</small><p>
+
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-body">
+                <a class="stretched-link text-body" href="https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;website&#x2F;">Building my site</a>
+                
+                  <p>design choices and code implementations</p>
+                
+                
+<p><small>
+    
+    Updated 2022-04-20
+    &middot;
+    
     Posted 2022-03-21
-    <!-- &nbsp;&hyphen;&nbsp; -->
     &middot;
-    <strong>
-        <!-- 3&nbsp;minute read -->
-        3 minute read
-    </strong>
+    2 minute read
 </small><p>
 
               </div>
@@ -91,17 +109,16 @@ TODO: implement tag filtering via taxonomies and what not</p>
             
             <div class="card">
               <div class="card-body">
-                <h2 class="h3"><a class="stretched-link text-body" href="https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;math&#x2F;">Math Typesetting</a></h2>
+                <a class="stretched-link text-body" href="https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;math&#x2F;">Math Typesetting</a>
+                
+                  <p>Showcasing math typsetting</p>
                 
                 
 <p><small>
+    
     Posted 2021-04-08
-    <!-- &nbsp;&hyphen;&nbsp; -->
     &middot;
-    <strong>
-        <!-- 1&nbsp;minute read -->
-        1 minute read
-    </strong>
+    1 minute read
 </small><p>
 
               </div>
@@ -115,9 +132,6 @@ TODO: implement tag filtering via taxonomies and what not</p>
   </div>
 </div>
 
-    </div>
-  </section>
-  
 <footer class="footer text-muted mt-auto">
 	<div class="container">
 		<div class="row">
@@ -130,6 +144,9 @@ TODO: implement tag filtering via taxonomies and what not</p>
 	</div>
 </footer>
 
+
+    </div>
+  </section>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
