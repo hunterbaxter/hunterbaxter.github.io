@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hunterbaxter.github.io/sitemap.xml

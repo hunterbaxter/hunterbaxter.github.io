@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang=en>
+
+
+  
+      <!-- KaTeX -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans">
+  <title>Hunter Baxter</title>
+  <meta name="description" content=Hunter Baxter&#x27;s website>
+</head>
+<body>
+  
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+<!-- sm / lg / xl chagne when the navbar collapes -->
+<nav class="navbar navbar-expand-sm navbar-light">
+  <!--  don't know if container fluid looks better or not -->
+  <div class="container">
+    <a class="navbar-brand" href="/">Hunter Baxter</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="toggleMobileMenu">
+      <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-2"> -->
+      <ul class="navbar-nav ms-auto text-center">
+        <li class="navbar-item"><a class="nav-link" href="/about/"> about </a></li>
+        <li class="navbar-item"><a class="nav-link" href="/blog/"> blog </a></li>
+        <li class="navbar-item"><a class="nav-link" href="/contact/"> contact </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <section class="section">
+    <div class="container">
+      
+<div class="container" role="document">
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-10 col-xxl-8">
+        <article>
+        <h1>Math Typesetting</h1>
+        
+<p><small>
+    
+    Posted 2021-04-08
+    &middot;
+    1 minute read
+    &middot;
+    
+      Tags:
+      
+        test
+      
+        math
+      
+    
+</small><p>
+
+        <p>Showcasing math typsetting</p>
+        
+
+<!-- use accordion-flush to get rid of border -->
+<div class="accordion" id="accordionToc">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingToc">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseToc" aria-expanded="false" aria-controls="collapseToc">
+        Table of Contents
+      </button>
+    </h2>
+    <div id="collapseToc" class="accordion-collapse collapse" aria-labelledby="headingToc" data-bs-parent="#accordionToc">
+      <div class="accordion-body">
+        
+          <li><a href="https://hunterbaxter.github.io/blog/math/#examples"> Examples</a></li>
+    	  
+    	  
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <p><p>In this example we will be using <a href="https://katex.org/">KaTeX</a></p>
+<ul>
+<li>Create a macro under <code>/template/macros/math.html</code> with a macro named <code>math</code>.</li>
+<li>Within this macro reference the <a href="https://katex.org/docs/autorender.html">Auto-render Extension</a> or host these scripts locally.</li>
+<li>Import the macro in your templates like so:</li>
+</ul>
+<pre><code>{% import 'macros/math.html' as macros %}
+{% if page.extra.math or section.extra.math or config.extra.math %}
+{{ macros::math() }}
+{% endif %}
+</code></pre>
+<ul>
+<li>To enable KaTex globally set the parameter <code>extra.math</code> to <code>true</code> in a project's configuration</li>
+<li>To enable KaTex on a per page basis include the parameter <code>extra.math = true</code> in content files</li>
+</ul>
+<p><strong>Note:</strong></p>
+<ol>
+<li>The MathJax library is the other optional choice, and you can set the parameter <code>extra.library</code> to <code>mathjax</code> in a project's configuration</li>
+<li>Use the online reference of <a href="https://katex.org/docs/supported.html">Supported TeX Functions</a></li>
+</ol>
+<h3 id="examples">Examples</h3>
+<p>
+Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
+</p>
+<p>Block math:
+$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$</p>
+</p>
+        </article>
+      </div>
+    </div>
+</div>
+
+<footer class="footer text-muted mt-auto">
+	<div class="container">
+        <div class="col-md-12 col-lg-10 col-xxl-8>
+            <ul class="list-inline">
+                <li class="list-inline-item">©2022 Hunter Baxter</li>
+            </ul>
+        </div>
+	</div>
+</footer>
+
+
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>
