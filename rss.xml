@@ -7,18 +7,7 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://hunterbaxter.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Thu, 21 Apr 2022 00:00:00 +0000</lastBuildDate>
-        <item>
-            <title>Seed Mass Gainer</title>
-            <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
-            <link>https://hunterbaxter.github.io/blog/seed-bulk/</link>
-            <guid>https://hunterbaxter.github.io/blog/seed-bulk/</guid>
-            <description>&lt;h1 id=&quot;concept&quot;&gt;Concept&lt;&#x2F;h1&gt;
-&lt;p&gt;After finishing undergrad, and being 23 years old, I realized that I will be 30 before I know it, and my testosterone levels will begin to taper.
-So, if I want to make any last progress for my body, the next seven years are for it.
-So, I decided that I wanted to move from a competitive -100kg division weight to a competitive +100kg division weight.&lt;&#x2F;p&gt;
-</description>
-        </item>
+        <lastBuildDate>Wed, 20 Apr 2022 00:00:00 +0000</lastBuildDate>
         <item>
             <title>Markdown Syntax Guide</title>
             <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
