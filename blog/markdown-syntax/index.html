@@ -48,7 +48,7 @@
         
 <p><small>
     
-    Updated 2022-04-13
+    Updated 2022-04-23
     &middot;
     
     Posted 2022-04-13
@@ -68,86 +68,8 @@
     
 </small><p>
 
-        <p>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</p>
+        <p>Sample article showcasing basic Markdown syntax and formatting for HTML elements to test functionality and looks</p>
         
-
-<!-- use accordion-flush to get rid of border -->
-<div class="accordion" id="accordionToc">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingToc">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseToc" aria-expanded="false" aria-controls="collapseToc">
-        Table of Contents
-      </button>
-    </h2>
-    <div id="collapseToc" class="accordion-collapse collapse" aria-labelledby="headingToc" data-bs-parent="#accordionToc">
-      <div class="accordion-body">
-        
-          <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#headings"> Headings</a></li>
-    	  
-    	  
-          <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#h1"> H1</a></li>
-    	  
-    	  <ul>
-    	    
-    	    <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#h2">H2</a></li>
-    	    
-    	  </ul>
-    	  
-    	  
-          <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#paragraph"> Paragraph</a></li>
-    	  
-    	  
-          <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#blockquotes"> Blockquotes</a></li>
-    	  
-    	  <ul>
-    	    
-    	    <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#blockquote-without-attribution">Blockquote without attribution</a></li>
-    	    
-    	    <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#blockquote-with-attribution">Blockquote with attribution</a></li>
-    	    
-    	  </ul>
-    	  
-    	  
-          <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#tables"> Tables</a></li>
-    	  
-    	  <ul>
-    	    
-    	    <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#inline-markdown-within-tables">Inline Markdown within tables</a></li>
-    	    
-    	  </ul>
-    	  
-    	  
-          <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#code-blocks"> Code Blocks</a></li>
-    	  
-    	  <ul>
-    	    
-    	    <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#code-block-with-backticks">Code block with backticks</a></li>
-    	    
-    	    <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#code-block-indented-with-four-spaces">Code block indented with four spaces</a></li>
-    	    
-    	  </ul>
-    	  
-    	  
-          <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#list-types"> List Types</a></li>
-    	  
-    	  <ul>
-    	    
-    	    <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#ordered-list">Ordered List</a></li>
-    	    
-    	    <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#unordered-list">Unordered List</a></li>
-    	    
-    	    <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#nested-list">Nested list</a></li>
-    	    
-    	  </ul>
-    	  
-    	  
-          <li><a href="https://hunterbaxter.github.io/blog/markdown-syntax/#other-elements-abbr-sub-sup-kbd-mark"> Other Elements — abbr, sub, sup, kbd, mark</a></li>
-    	  
-    	  
-      </div>
-    </div>
-  </div>
-</div>
 
 
         <p><h1 id="headings">Headings</h1>
@@ -203,7 +125,20 @@ out-of-the-box.</p>
 </tbody></table>
 <h1 id="code-blocks">Code Blocks</h1>
 <h3 id="code-block-with-backticks">Code block with backticks</h3>
-<pre><code>&lt;!doctype html&gt;
+<pre style="background-color:#f5f5f5;">
+<code><span style="color:#1f1f1f;">&lt;!doctype html&gt;
+</span><span style="color:#6486ab;">&lt;html lang=</span><span style="color:#d07711;">&quot;en&quot;</span><span style="color:#6486ab;">&gt;
+&lt;head&gt;
+  </span><span style="color:#7f902a;">&lt;meta charset=</span><span style="color:#d07711;">&quot;utf-8&quot;</span><span style="color:#7f902a;">&gt;
+  &lt;title&gt;</span><span style="color:#1f1f1f;">Example HTML5 Document</span><span style="color:#7f902a;">&lt;/title&gt;
+</span><span style="color:#6486ab;">&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;</span><span style="color:#1f1f1f;">Test</span><span style="color:#6486ab;">&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</span></code></pre><h3 id="code-block-indented-with-four-spaces">Code block indented with four spaces</h3>
+<pre style="background-color:#f5f5f5;">
+<code>&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
   &lt;meta charset=&quot;utf-8&quot;&gt;
@@ -213,20 +148,7 @@ out-of-the-box.</p>
   &lt;p&gt;Test&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-<h3 id="code-block-indented-with-four-spaces">Code block indented with four spaces</h3>
-<pre><code>&lt;!doctype html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Test&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<h1 id="list-types">List Types</h1>
+</code></pre><h1 id="list-types">List Types</h1>
 <h3 id="ordered-list">Ordered List</h3>
 <ol>
 <li>First item</li>
@@ -264,7 +186,6 @@ session.</p>
 <p>Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and
 other small creatures.</p>
 <hr />
-<!-- Note: There must be a blank line between every two lines of the footnote difinition.  -->
 <div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
 <p>The above quote is excerpted from Rob Pike's <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk</a>
 during Gopherfest, November 18, 2015.</p>

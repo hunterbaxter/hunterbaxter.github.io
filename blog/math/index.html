@@ -77,25 +77,6 @@
         <p>Showcasing math typsetting</p>
         
 
-<!-- use accordion-flush to get rid of border -->
-<div class="accordion" id="accordionToc">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingToc">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseToc" aria-expanded="false" aria-controls="collapseToc">
-        Table of Contents
-      </button>
-    </h2>
-    <div id="collapseToc" class="accordion-collapse collapse" aria-labelledby="headingToc" data-bs-parent="#accordionToc">
-      <div class="accordion-body">
-        
-          <li><a href="https://hunterbaxter.github.io/blog/math/#examples"> Examples</a></li>
-    	  
-    	  
-      </div>
-    </div>
-  </div>
-</div>
-
 
         <p><p>In this example we will be using <a href="https://katex.org/">KaTeX</a></p>
 <ul>
@@ -103,11 +84,12 @@
 <li>Within this macro reference the <a href="https://katex.org/docs/autorender.html">Auto-render Extension</a> or host these scripts locally.</li>
 <li>Import the macro in your templates like so:</li>
 </ul>
-<pre><code>{% import 'macros/math.html' as macros %}
-{% if page.extra.math or section.extra.math or config.extra.math %}
-{{ macros::math() }}
-{% endif %}
-</code></pre>
+<pre style="background-color:#f5f5f5;">
+<code><span style="color:#5597d6;">{%</span><span style="color:#1f1f1f;"> import </span><span style="color:#d07711;">&#39;macros/math.html&#39;</span><span style="color:#1f1f1f;"> as macros %}
+</span><span style="color:#5597d6;">{%</span><span style="color:#1f1f1f;"> if page.extra.math or section.extra.math or config.extra.math %}
+</span><span style="color:#5597d6;">{{</span><span style="color:#1f1f1f;"> macros::math() }}
+</span><span style="color:#5597d6;">{%</span><span style="color:#1f1f1f;"> endif %}
+</span></code></pre>
 <ul>
 <li>To enable KaTex globally set the parameter <code>extra.math</code> to <code>true</code> in a project's configuration</li>
 <li>To enable KaTex on a per page basis include the parameter <code>extra.math = true</code> in content files</li>

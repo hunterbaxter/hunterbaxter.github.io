@@ -7,7 +7,7 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://hunterbaxter.github.io/tags/test/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 23 Apr 2022 00:00:00 +0000</lastBuildDate>
         <item>
             <title>Markdown Syntax Guide</title>
             <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
@@ -66,7 +66,20 @@ out-of-the-box.&lt;&#x2F;p&gt;
 &lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
 &lt;h1 id=&quot;code-blocks&quot;&gt;Code Blocks&lt;&#x2F;h1&gt;
 &lt;h3 id=&quot;code-block-with-backticks&quot;&gt;Code block with backticks&lt;&#x2F;h3&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&lt;pre style=&quot;background-color:#f5f5f5;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;&amp;lt;!doctype html&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;lt;html lang=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;en&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;gt;
+&amp;lt;head&amp;gt;
+  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;lt;meta charset=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;utf-8&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;gt;
+  &amp;lt;title&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;Example HTML5 Document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;lt;&#x2F;title&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;lt;&#x2F;head&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;p&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;Test&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;lt;&#x2F;p&amp;gt;
+&amp;lt;&#x2F;body&amp;gt;
+&amp;lt;&#x2F;html&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;code-block-indented-with-four-spaces&quot;&gt;Code block indented with four spaces&lt;&#x2F;h3&gt;
+&lt;pre style=&quot;background-color:#f5f5f5;&quot;&gt;
+&lt;code&gt;&amp;lt;!doctype html&amp;gt;
 &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
 &amp;lt;head&amp;gt;
   &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
@@ -76,20 +89,7 @@ out-of-the-box.&lt;&#x2F;p&gt;
   &amp;lt;p&amp;gt;Test&amp;lt;&#x2F;p&amp;gt;
 &amp;lt;&#x2F;body&amp;gt;
 &amp;lt;&#x2F;html&amp;gt;
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;code-block-indented-with-four-spaces&quot;&gt;Code block indented with four spaces&lt;&#x2F;h3&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
-&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
-  &amp;lt;title&amp;gt;Example HTML5 Document&amp;lt;&#x2F;title&amp;gt;
-&amp;lt;&#x2F;head&amp;gt;
-&amp;lt;body&amp;gt;
-  &amp;lt;p&amp;gt;Test&amp;lt;&#x2F;p&amp;gt;
-&amp;lt;&#x2F;body&amp;gt;
-&amp;lt;&#x2F;html&amp;gt;
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h1 id=&quot;list-types&quot;&gt;List Types&lt;&#x2F;h1&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h1 id=&quot;list-types&quot;&gt;List Types&lt;&#x2F;h1&gt;
 &lt;h3 id=&quot;ordered-list&quot;&gt;Ordered List&lt;&#x2F;h3&gt;
 &lt;ol&gt;
 &lt;li&gt;First item&lt;&#x2F;li&gt;
@@ -127,7 +127,6 @@ session.&lt;&#x2F;p&gt;
 &lt;p&gt;Most &lt;mark&gt;salamanders&lt;&#x2F;mark&gt; are nocturnal, and hunt for insects, worms, and
 other small creatures.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
-&lt;!-- Note: There must be a blank line between every two lines of the footnote difinition.  --&gt;
 &lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
 &lt;p&gt;The above quote is excerpted from Rob Pike&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=PAAkCSZUG1c&quot;&gt;talk&lt;&#x2F;a&gt;
 during Gopherfest, November 18, 2015.&lt;&#x2F;p&gt;
@@ -143,21 +142,22 @@ during Gopherfest, November 18, 2015.&lt;&#x2F;p&gt;
             <link>https://hunterbaxter.github.io/blog/code/</link>
             <guid>https://hunterbaxter.github.io/blog/code/</guid>
             <description>&lt;h1 id=&quot;testing-out-code-snippets&quot;&gt;Testing out code snippets&lt;&#x2F;h1&gt;
-&lt;pre&gt;&lt;code&gt;&#x2F;&#x2F; syntax highlightin rust
-fn main() {
-    println!(&amp;quot;Hello World!&amp;quot;);
+&lt;pre style=&quot;background-color:#f5f5f5;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#7f8989;&quot;&gt;&#x2F;&#x2F; syntax highlightin rust
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#668f14;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c23f31;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;() {
+    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a2a001;&quot;&gt;println!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;Hello World!&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;);
 }
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;&lt;code&gt;let x = y; &lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code&gt;&#x2F;&#x2F; syntax highlightin just with rs
-fn main() {
-    println!(&amp;quot;Hello World!&amp;quot;);
+&lt;pre style=&quot;background-color:#f5f5f5;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#7f8989;&quot;&gt;&#x2F;&#x2F; syntax highlightin just with rs
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#668f14;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c23f31;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;() {
+    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a2a001;&quot;&gt;println!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;Hello World!&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;);
 }
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;pre&gt;&lt;code&gt;$ .&#x2F;hello
-Hello World!
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-</description>
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;pre style=&quot;background-color:#f5f5f5;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#5597d6;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt; .&#x2F;hello
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5597d6;&quot;&gt;Hello&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt; World!
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;</description>
         </item>
         <item>
             <title>Math Typesetting</title>
@@ -170,11 +170,12 @@ Hello World!
 &lt;li&gt;Within this macro reference the &lt;a href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;docs&#x2F;autorender.html&quot;&gt;Auto-render Extension&lt;&#x2F;a&gt; or host these scripts locally.&lt;&#x2F;li&gt;
 &lt;li&gt;Import the macro in your templates like so:&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;pre&gt;&lt;code&gt;{% import &#x27;macros&#x2F;math.html&#x27; as macros %}
-{% if page.extra.math or section.extra.math or config.extra.math %}
-{{ macros::math() }}
-{% endif %}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre style=&quot;background-color:#f5f5f5;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#5597d6;&quot;&gt;{%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt; import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;#39;macros&#x2F;math.html&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt; as macros %}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5597d6;&quot;&gt;{%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt; if page.extra.math or section.extra.math or config.extra.math %}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5597d6;&quot;&gt;{{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt; macros::math() }}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5597d6;&quot;&gt;{%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt; endif %}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;ul&gt;
 &lt;li&gt;To enable KaTex globally set the parameter &lt;code&gt;extra.math&lt;&#x2F;code&gt; to &lt;code&gt;true&lt;&#x2F;code&gt; in a project&#x27;s configuration&lt;&#x2F;li&gt;
 &lt;li&gt;To enable KaTex on a per page basis include the parameter &lt;code&gt;extra.math = true&lt;&#x2F;code&gt; in content files&lt;&#x2F;li&gt;

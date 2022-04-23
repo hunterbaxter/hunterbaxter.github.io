@@ -19,11 +19,12 @@
 &lt;li&gt;Within this macro reference the &lt;a href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;docs&#x2F;autorender.html&quot;&gt;Auto-render Extension&lt;&#x2F;a&gt; or host these scripts locally.&lt;&#x2F;li&gt;
 &lt;li&gt;Import the macro in your templates like so:&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;pre&gt;&lt;code&gt;{% import &#x27;macros&#x2F;math.html&#x27; as macros %}
-{% if page.extra.math or section.extra.math or config.extra.math %}
-{{ macros::math() }}
-{% endif %}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre style=&quot;background-color:#f5f5f5;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#5597d6;&quot;&gt;{%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt; import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;#39;macros&#x2F;math.html&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt; as macros %}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5597d6;&quot;&gt;{%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt; if page.extra.math or section.extra.math or config.extra.math %}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5597d6;&quot;&gt;{{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt; macros::math() }}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5597d6;&quot;&gt;{%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt; endif %}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;ul&gt;
 &lt;li&gt;To enable KaTex globally set the parameter &lt;code&gt;extra.math&lt;&#x2F;code&gt; to &lt;code&gt;true&lt;&#x2F;code&gt; in a project&#x27;s configuration&lt;&#x2F;li&gt;
 &lt;li&gt;To enable KaTex on a per page basis include the parameter &lt;code&gt;extra.math = true&lt;&#x2F;code&gt; in content files&lt;&#x2F;li&gt;
