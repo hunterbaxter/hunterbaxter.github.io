@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang=en>
+
+
+  
+      <!-- KaTeX -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans">
+  <title>Hunter Baxter</title>
+  <meta name="description" content=Hunter Baxter&#x27;s website>
+</head>
+<body>
+  
+<nav class="navbar navbar-expand-sm navbar-light">
+  <div class="container">
+    <a class="navbar-brand" href="/">Hunter Baxter</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="toggleMobileMenu">
+      <ul class="navbar-nav ms-auto text-center">
+        <li class="navbar-item"><a class="nav-link" href="/about/"> about </a></li>
+        <li class="navbar-item"><a class="nav-link" href="/blog/"> blog </a></li>
+        <li class="navbar-item"><a class="nav-link" href="/contact/"> contact </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <section class="section">
+    <div class="container">
+      
+<div class="container" role="document">
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-10 col-xxl-8">
+        <article>
+        <h1>My Website</h1>
+        
+<p><small>
+    
+    Posted 2022-05-23
+    &middot;
+    10 minute read
+    &middot;
+    
+    
+      Tags = [
+      
+        
+        tech
+          
+        
+      
+        
+          , diy
+        
+      
+      ]
+    
+</small><p>
+
+        <p>the design choices and technical details of my site</p>
+        
+
+<!-- use accordion-flush to get rid of border -->
+<div class="accordion" id="accordionToc">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingToc">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseToc" aria-expanded="false" aria-controls="collapseToc">
+        Table of Contents
+      </button>
+    </h2>
+    <div id="collapseToc" class="accordion-collapse collapse" aria-labelledby="headingToc" data-bs-parent="#accordionToc">
+      <div class="accordion-body">
+        
+          <li><a href="https://hunterbaxter.github.io/blog/website/#motivation"> Motivation</a></li>
+    	  
+    	  
+          <li><a href="https://hunterbaxter.github.io/blog/website/#planning"> Planning</a></li>
+    	  
+    	  <ul>
+    	    
+    	    <li><a href="https://hunterbaxter.github.io/blog/website/#prior-sites-frameworks-and-framework-choice">Prior Sites, Frameworks, and Framework choice</a></li>
+    	    
+    	    <li><a href="https://hunterbaxter.github.io/blog/website/#wireframes-and-site-design">Wireframes and Site Design</a></li>
+    	    
+    	    <li><a href="https://hunterbaxter.github.io/blog/website/#aesthetics">Aesthetics</a></li>
+    	    
+    	  </ul>
+    	  
+    	  
+          <li><a href="https://hunterbaxter.github.io/blog/website/#technical-aspects"> Technical Aspects</a></li>
+    	  
+    	  <ul>
+    	    
+    	    <li><a href="https://hunterbaxter.github.io/blog/website/#header">Header</a></li>
+    	    
+    	    <li><a href="https://hunterbaxter.github.io/blog/website/#responsive-text">Responsive Text</a></li>
+    	    
+    	    <li><a href="https://hunterbaxter.github.io/blog/website/#table-of-contents">Table of Contents</a></li>
+    	    
+    	    <li><a href="https://hunterbaxter.github.io/blog/website/#technical-challenges">Technical Challenges</a></li>
+    	    
+    	    <li><a href="https://hunterbaxter.github.io/blog/website/#markdown-features">Markdown Features</a></li>
+    	    
+    	    <li><a href="https://hunterbaxter.github.io/blog/website/#hosting">Hosting</a></li>
+    	    
+    	  </ul>
+    	  
+    	  
+          <li><a href="https://hunterbaxter.github.io/blog/website/#conclusion"> Conclusion</a></li>
+    	  
+    	  
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <p><h1 id="motivation">Motivation</h1>
+<p>Not using mainstream social media (Facebook, Twitter, Snapchat, Instagram) has often made keeping in touch with others difficult.
+A personal website allows me to give updates to my life publicly in a way that social media does not (maybe I will write a post one day).
+In addition, it will help me professionally to have a centralized location for my public work.</p>
+<p>The motivation to <strong>create</strong> my site rather than use a theme was to have the specific website I had in mine without any compromises and the knowledge to fix the errors that will inevitably occur.
+This article broadly describes a subset of the choices and technical details that went into making my website.</p>
+<h1 id="planning">Planning</h1>
+<h2 id="prior-sites-frameworks-and-framework-choice">Prior Sites, Frameworks, and Framework choice</h2>
+<p>In the past, I have used the <a href="https://github.com/academicpages/academicpages.github.io">Jekyll theme Academic Pages</a> and <a href="https://github.com/adityatelange/hugo-PaperMod">Hugo PaperMod</a>.
+The reason I was not satisfied with these themes was:</p>
+<ol>
+<li>They were very mature, as a result, complicated. Since I am very inexperienced with front-end development, I found tweaking the sites thorny.</li>
+<li>The git repositories were outdated with the current version of {Jekyll, Hugo} when I was using it - breaking some features of the site (which I did not know how to fix)</li>
+</ol>
+<p>Studying the source code and learning the frameworks would mitigate the issue of not understanding the complexities of the themes, but instead, I chose to start from scratch (which has the benefit of learning basic HTML and CSS).</p>
+<p>Since I started from scratch, I had to pick a static site generator.
+Static site generators essentially all do the same thing, and unless you are doing something custom, choose one with a theme you like and has markdown rendering.
+However, I am doing something custom from scratch, so the decision would heavily impact my enjoyment of the process of building the site.
+I chose Zola because it is written in a language I know well, has fast live updates, and has a templating language like Jinja2.</p>
+<h2 id="wireframes-and-site-design">Wireframes and Site Design</h2>
+<p>In one of my classes at university, I remember working on a project that had a client, and our front-end developer made wireframes before any development.
+The rationality was that if there is a clear idea of the site/look beforehand, progress moves in a clear direction with well-defined milestones.
+Since I am the client, I did not put a ton of effort into creating a polished wireframe and instead sketched my ideas onto a tablet quickly.</p>
+<p><img src="https://hunterbaxter.github.io/blog/website/wireframe_header.png" alt="header/footer wireframe" />
+<img src="https://hunterbaxter.github.io/blog/website/wireframe_home.png" alt="home wireframe" />
+<img src="https://hunterbaxter.github.io/blog/website/wireframe_about.png" alt="about wireframe" />
+<img src="https://hunterbaxter.github.io/blog/website/wireframe_contact.png" alt="contact wireframe" />
+<img src="https://hunterbaxter.github.io/blog/website/wireframe_publications.png" alt="publications wireframe" />
+<img src="https://hunterbaxter.github.io/blog/website/wireframe_software.png" alt="software wireframe" />
+<img src="https://hunterbaxter.github.io/blog/website/wireframe_blog.png" alt="blog wireframe" />
+<img src="https://hunterbaxter.github.io/blog/website/wireframe_tags.png" alt="tags wireframe" /></p>
+<ul>
+<li><strong>Header and Footer</strong>:
+For the header, it was important to me that it be responsive and collapse when viewed on a smaller screen.
+I will describe the responsive aspect in the technical section.</li>
+<li><strong>Home Page</strong>:
+I haven't implemented this yet (the rest of the site was enough work), as I don't have enough pictures I am comfortable using publicly,
+but the idea of having a more creative homepage would make my site a little more non-tech user appealing.
+Maybe one day, but not today. So, for now, the home page redirects to the about page.</li>
+<li><strong>About and Contact Pages</strong>:
+The about page gives a short bio about me, and maybe later, it can have some additional sections that go into more details about a particular area of my life.
+It might also contain instructions for getting in contact with me or collaborating.</li>
+<li><strong>Professional Pages</strong>:
+Once I have built up a public portfolio I am comfortable displaying publicly; I will have separate pages of publications and software with slightly different requirements.</li>
+<li><strong>Blog Pages</strong>:
+For more informal content, I wanted to have a simple card design and the option to filter posts by tags.
+The nice thing about Zola is that each tag can have a unique RSS feed.</li>
+</ul>
+<h2 id="aesthetics">Aesthetics</h2>
+<p>Although unpopular in a digital format, I enjoy greyscale color palettes (with an occasional exception for code snippets).
+I also prefer the minimal designs.
+So, I went with simple higher contrast colors (#F5F5F5), clean designs, and my personal font family of choice: <a href="https://www.ibm.com/plex/">IBM Plex</a> (specifically <a href="https://fonts.google.com/specimen/IBM+Plex+Sans">Sans</a> <sup class="footnote-reference"><a href="#1">1</a></sup>).
+I believe this decision is sound because most users can and <em>should</em> (when possible) use reader view on their browser, which lets them control font, page color, and text size (some even have text-to-speech).
+So, my site aesthetic choices are just an opinionated default.</p>
+<h1 id="technical-aspects">Technical Aspects</h1>
+<p>I wanted my site to be responsive and mobile-first, as more and more people are viewing the web through mobile devices like tablets (again, people should use reader view, but I wanted to prepare for a less tech-savvy audience).
+Bootstrap is the most popular framework for responsive design, and <a href="https://adidoks.org/">AdiDoks</a>, a theme I drew inspiration and code from, uses it.
+I was pleased with using Bootstrap, as there were countless examples online, and the documentation was manageable.</p>
+<h2 id="header">Header</h2>
+<p>The header of my site is a very simple bootstrap navbar.
+The notable features reside in the <code>navbar-toggler</code> class, where the navbar collapses when on a mobile device or small screen device.
+The collapsable header greatly enhanced the cellphone experience when testing.</p>
+<p><code>{% macros navbar() %}</code> defines a macro (just like a shortcode), allowing me to reuse the code on multiple pages without duplication.</p>
+<pre style="background-color:#f5f5f5;">
+<code><span style="color:#1f1f1f;">{% macro navbar() %}
+</span><span style="color:#6486ab;">&lt;nav class=</span><span style="color:#d07711;">&quot;navbar navbar-expand-sm navbar-light&quot;</span><span style="color:#6486ab;">&gt;
+  &lt;div class=</span><span style="color:#d07711;">&quot;container&quot;</span><span style="color:#6486ab;">&gt;
+    </span><span style="color:#7f902a;">&lt;a class=</span><span style="color:#d07711;">&quot;navbar-brand&quot; </span><span style="color:#7f902a;">href=</span><span style="color:#d07711;">&quot;/&quot;</span><span style="color:#7f902a;">&gt;</span><span style="color:#1f1f1f;">{{ config.title }}</span><span style="color:#7f902a;">&lt;/a&gt;
+    &lt;button class=</span><span style="color:#d07711;">&quot;navbar-toggler&quot; </span><span style="color:#7f902a;">type=</span><span style="color:#d07711;">&quot;button&quot; </span><span style="color:#7f902a;">data-bs-toggle=</span><span style="color:#d07711;">&quot;collapse&quot; </span><span style="color:#7f902a;">data-bs-target=</span><span style="color:#d07711;">&quot;#toggleMobileMenu&quot; </span><span style="color:#7f902a;">aria-controls=</span><span style="color:#d07711;">&quot;toggleMobileMenu&quot; </span><span style="color:#7f902a;">aria-expanded=</span><span style="color:#d07711;">&quot;false&quot; </span><span style="color:#7f902a;">aria-label=</span><span style="color:#d07711;">&quot;Toggle navigation&quot;</span><span style="color:#7f902a;">&gt;
+      &lt;span class=</span><span style="color:#d07711;">&quot;navbar-toggler-icon&quot;</span><span style="color:#7f902a;">&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    </span><span style="color:#6486ab;">&lt;div class=</span><span style="color:#d07711;">&quot;collapse navbar-collapse&quot; </span><span style="color:#6486ab;">id=</span><span style="color:#d07711;">&quot;toggleMobileMenu&quot;</span><span style="color:#6486ab;">&gt;
+      &lt;ul class=</span><span style="color:#d07711;">&quot;navbar-nav ms-auto text-center&quot;</span><span style="color:#6486ab;">&gt;
+        </span><span style="color:#7f902a;">&lt;li class=</span><span style="color:#d07711;">&quot;navbar-item&quot;</span><span style="color:#7f902a;">&gt;&lt;a class=</span><span style="color:#d07711;">&quot;nav-link&quot; </span><span style="color:#7f902a;">href=</span><span style="color:#d07711;">&quot;/menu_section/&quot;</span><span style="color:#7f902a;">&gt;</span><span style="color:#1f1f1f;"> about </span><span style="color:#7f902a;">&lt;/a&gt;&lt;/li&gt;
+        </span><span style="color:#7f8989;">&lt;!-- insert more sections --&gt;
+      </span><span style="color:#6486ab;">&lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</span><span style="color:#1f1f1f;">{% endmacro %}
+</span></code></pre><h2 id="responsive-text">Responsive Text</h2>
+<p>Although I always encourage people to use the reader view on their browser (I must have said this a couple of times by now haha), some may not know it exists.
+So, I need to account for this and make sure all of my text content looks good on any screen size.
+Bootstrap uses a <a href="https://getbootstrap.com/docs/5.0/layout/grid/">Grid System</a>, and rather than trying to explain, I encourage readers to view the link (I am not very knowledgeable on it and couldn't explain it well).
+The below code snippet contains much of the common code that wraps many elements on my site.</p>
+<pre style="background-color:#f5f5f5;">
+<code><span style="color:#1f1f1f;">{% block content %}
+</span><span style="color:#6486ab;">&lt;div class=</span><span style="color:#d07711;">&quot;container&quot;</span><span style="color:#6486ab;">&gt;
+    &lt;div class=</span><span style="color:#d07711;">&quot;row justify-content-center&quot;</span><span style="color:#6486ab;">&gt;
+      &lt;div class=</span><span style="color:#d07711;">&quot;col-md-12 col-lg-10 col-xxl-8&quot;</span><span style="color:#6486ab;">&gt;
+        &lt;h1&gt;</span><span style="color:#1f1f1f;">{{ page.title }}</span><span style="color:#6486ab;">&lt;/h1&gt;
+        &lt;p&gt;</span><span style="color:#1f1f1f;">{{ page.content | safe }}</span><span style="color:#6486ab;">&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</span><span style="color:#1f1f1f;">{% endblock content %}
+</span></code></pre><h2 id="table-of-contents">Table of Contents</h2>
+<p>I wouldn't say this was a complicated section to implement in HTML, as the <a href="https://www.getzola.org/documentation/content/table-of-contents/">Zola Documentation</a> gives the exact necessary code,
+but I found that it didn't look good unless inserted into a <a href="https://getbootstrap.com/docs/5.0/components/accordion/">Bootstrap Accordion component</a> with some CSS to make it pleasing to the eyes.
+In addition, there were some annoying aspects of the accordion component when focused, so it took some digging to write the CSS to remove them.
+<a href="https://www.youtube.com/watch?v=E6x6jnYioHs">This video</a> in particular was a good resource.</p>
+<pre style="background-color:#f5f5f5;">
+<code><span style="color:#1f1f1f;">{% macro page_toc(page) %}
+{% if page.extra.toc %}
+</span><span style="color:#7f8989;">&lt;!-- use accordion-flush to get rid of border --&gt;
+</span><span style="color:#6486ab;">&lt;div class=</span><span style="color:#d07711;">&quot;accordion&quot; </span><span style="color:#6486ab;">id=</span><span style="color:#d07711;">&quot;accordionToc&quot;</span><span style="color:#6486ab;">&gt;
+  &lt;div class=</span><span style="color:#d07711;">&quot;accordion-item&quot;</span><span style="color:#6486ab;">&gt;
+    &lt;h2 class=</span><span style="color:#d07711;">&quot;accordion-header&quot; </span><span style="color:#6486ab;">id=</span><span style="color:#d07711;">&quot;headingToc&quot;</span><span style="color:#6486ab;">&gt;
+      </span><span style="color:#7f902a;">&lt;button class=</span><span style="color:#d07711;">&quot;accordion-button collapsed&quot; </span><span style="color:#7f902a;">type=</span><span style="color:#d07711;">&quot;button&quot; </span><span style="color:#7f902a;">data-bs-toggle=</span><span style="color:#d07711;">&quot;collapse&quot; </span><span style="color:#7f902a;">data-bs-target=</span><span style="color:#d07711;">&quot;#collapseToc&quot; </span><span style="color:#7f902a;">aria-expanded=</span><span style="color:#d07711;">&quot;false&quot; </span><span style="color:#7f902a;">aria-controls=</span><span style="color:#d07711;">&quot;collapseToc&quot;</span><span style="color:#7f902a;">&gt;
+</span><span style="color:#1f1f1f;">        Table of Contents
+      </span><span style="color:#7f902a;">&lt;/button&gt;
+    </span><span style="color:#6486ab;">&lt;/h2&gt;
+    &lt;div id=</span><span style="color:#d07711;">&quot;collapseToc&quot; </span><span style="color:#6486ab;">class=</span><span style="color:#d07711;">&quot;accordion-collapse collapse&quot; </span><span style="color:#6486ab;">aria-labelledby=</span><span style="color:#d07711;">&quot;headingToc&quot; </span><span style="color:#6486ab;">data-bs-parent=</span><span style="color:#d07711;">&quot;#accordionToc&quot;</span><span style="color:#6486ab;">&gt;
+      &lt;div class=</span><span style="color:#d07711;">&quot;accordion-body&quot;</span><span style="color:#6486ab;">&gt;
+</span><span style="color:#1f1f1f;">        {% for h1 in page.toc %}
+          </span><span style="color:#7f902a;">&lt;li&gt;&lt;a href=</span><span style="color:#d07711;">&quot;{{ h1.permalink | safe }}&quot;</span><span style="color:#7f902a;">&gt;</span><span style="color:#1f1f1f;"> {{ h1.title }}</span><span style="color:#7f902a;">&lt;/a&gt;&lt;/li&gt;
+</span><span style="color:#1f1f1f;">    	  {% if h1.children %}
+    	  </span><span style="color:#6486ab;">&lt;ul&gt;
+</span><span style="color:#1f1f1f;">    	    {% for h2 in h1.children %}
+    	    </span><span style="color:#7f902a;">&lt;li&gt;&lt;a href=</span><span style="color:#d07711;">&quot;{{ h2.permalink | safe }}&quot;</span><span style="color:#7f902a;">&gt;</span><span style="color:#1f1f1f;">{{ h2.title }}</span><span style="color:#7f902a;">&lt;/a&gt;&lt;/li&gt;
+</span><span style="color:#1f1f1f;">    	    {% endfor %}
+    	  </span><span style="color:#6486ab;">&lt;/ul&gt;
+</span><span style="color:#1f1f1f;">    	  {% endif %}
+    	  {% endfor %}
+      </span><span style="color:#6486ab;">&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</span><span style="color:#1f1f1f;">{% endif %}
+{% endmacro %}
+</span></code></pre><pre style="background-color:#f5f5f5;">
+<code><span style="color:#9b703f;">.accordion-button </span><span style="color:#1f1f1f;">{
+  </span><span style="color:#c5af75;">background</span><span style="color:#1f1f1f;">: </span><span style="color:#5597d6;">$light-background-color</span><span style="color:#1f1f1f;">;
+  active-</span><span style="color:#c5af75;">background</span><span style="color:#1f1f1f;">: </span><span style="color:#5597d6;">$light-background-color
+</span><span style="color:#1f1f1f;">}
+</span><span style="color:#9b703f;">.accordion-button</span><span style="color:#c23f31;">:not</span><span style="color:#1f1f1f;">(</span><span style="color:#9b703f;">.collapsed</span><span style="color:#1f1f1f;">) {
+    </span><span style="color:#c5af75;">color</span><span style="color:#1f1f1f;">: </span><span style="color:#949175;">inherit</span><span style="color:#1f1f1f;">;
+    </span><span style="color:#c5af75;">background</span><span style="color:#1f1f1f;">: </span><span style="color:#5597d6;">$light-background-color
+</span><span style="color:#1f1f1f;">}
+</span><span style="color:#9b703f;">.accordion-button</span><span style="color:#c23f31;">:focus </span><span style="color:#1f1f1f;">{
+    </span><span style="color:#c5af75;">box-shadow</span><span style="color:#1f1f1f;">: </span><span style="color:#949175;">inherit</span><span style="color:#1f1f1f;">;
+}
+</span><span style="color:#7f8989;">// changes arrow color to black
+</span><span style="color:#9b703f;">.accordion-button</span><span style="color:#c23f31;">:not</span><span style="color:#1f1f1f;">(</span><span style="color:#9b703f;">.collapsed</span><span style="color:#1f1f1f;">)</span><span style="color:#c23f31;">::after </span><span style="color:#1f1f1f;">{
+    </span><span style="color:#c5af75;">filter</span><span style="color:#1f1f1f;">: </span><span style="color:#b39f04;">brightness</span><span style="color:#1f1f1f;">(</span><span style="color:#ca7840;">0</span><span style="color:#72ab00;">%</span><span style="color:#1f1f1f;">)
+}
+</span><span style="color:#7f8989;">// actual drop down color
+</span><span style="color:#9b703f;">.accordion-item </span><span style="color:#1f1f1f;">{
+  </span><span style="color:#c5af75;">background</span><span style="color:#1f1f1f;">: </span><span style="color:#5597d6;">$light-background-color</span><span style="color:#1f1f1f;">;
+}
+
+</span></code></pre><h2 id="technical-challenges">Technical Challenges</h2>
+<ul>
+<li>For some reason, markdown rendering has strange issues (tables, blockquotes) on my site, but no other example sites.
+Peculiar issues lead me to think I did something wrong, but it is plausible it is Zola's fault (unlikely).
+However, I tested markdown on barebones Zola and Hugo sites, and issues only occur on Zola.
+I created a bit of custom CSS to mitigate the issues with blockquotes (for now, I haven't dealt with tables).</li>
+</ul>
+<pre style="background-color:#f5f5f5;">
+<code><span style="color:#1f1f1f;">blockquote {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  border-left: 3px solid $fu-purple; // fu is furman university
+}
+</span></code></pre>
+<p>For footnotes, it also does not have redirects.
+Maybe Zola will add or fix these features in the future (they don't bother me enough for me to implement).</p>
+<ul>
+<li>I foresee having mild issues in the future with the depreciation of Bootstrap, and then I need to make a bunch of small annoying changes to upgrade to Bootstrap-{5+n}.
+Hopefully, this is in 5+ years because I don't want to touch front-end source code for a long time (HTML and CSS are mind-numbing).</li>
+</ul>
+<h2 id="markdown-features">Markdown Features</h2>
+<p>This section shows what the markdown rendering features I care about are like,
+both for visualization and to test that website features don't break.
+I made trivial CSS to modify the default look (colors primarily) for some features.
+Most of the examples are from Adidoks <a href="https://adidoks.org/blog/markdown-syntax/">markdown syntax</a> and <a href="https://adidoks.org/blog/math-typesetting/">math typesetting</a> guides.</p>
+<h3 id="blockquotes">Blockquotes</h3>
+<h4 id="blockquote-without-attribution">Blockquote without attribution</h4>
+<blockquote>
+<p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+<strong>Note</strong> that you can use <em>Markdown syntax</em> within a blockquote.</p>
+</blockquote>
+<h4 id="blockquote-with-attribution">Blockquote with attribution</h4>
+<blockquote>
+<p>All men by nature desire to know.<br>
+― <cite>Aristotle<sup class="footnote-reference"><a href="#2">2</a></sup></cite></p>
+</blockquote>
+<h3 id="other-elements-abbr-math-kbd-mark">Other Elements — abbr, math, kbd, mark</h3>
+<h4 id="abbr">abbr</h4>
+<p><abbr title="Laugh Out Loud">LOL</abbr> expands an abbreviation upon hovering.</p>
+<h4 id="math">math</h4>
+<p>Using <a href="https://katex.org/">KaTeX</a>, which is a subset of <a href="https://en.wikipedia.org/wiki/TeX">TeX</a>, math is rendered.</p>
+<p>
+Inline math: \((x_1 + x_2)^2 = x_1^2 + 2x_1x_2 + x_2^2\)
+</p>
+<p>Block math:
+$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$</p>
+<h4 id="kbd">kbd</h4>
+<p>Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the
+session.</p>
+<h4 id="mark">mark</h4>
+<p>Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and
+other small creatures.</p>
+<h2 id="hosting">Hosting</h2>
+<p>Currently, I am using Github pages, but I plan to get a domain name and use another hosting service in the future.
+However, for now, I can't justify the cost.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>I am happy with how the site turned out.
+It took <em>significantly</em> longer than expected, with many frustrating moments (particularly with CSS),
+but I think it was worth it to have my ideal public digital presence.</p>
+<hr />
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>The common consensus is that Sans-Serif is better for Serif on screens, and Serif is better than Sans-Serif on paper.
+I agree with this.</p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>Example: The quote is the first sentence of Aristotle's <a href="http://classics.mit.edu/Aristotle/metaphysics.html">Metaphysics</a>.</p>
+</div>
+</p>
+        </article>
+      </div>
+    </div>
+</div>
+
+<footer class="footer text-muted mt-auto">
+	<div class="container">
+        <div class="row justify-content-center text-center">
+        <div class="col-md-12 col-lg-10 col-xxl-8">
+            <ul class="list-inline">
+                <li class="list-inline-item">©2022 Hunter Baxter</li>
+            </ul>
+        </div>
+        </div>
+	</div>
+</footer>
+
+
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

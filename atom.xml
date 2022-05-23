@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Hunter Baxter</title>
+	<subtitle>Hunter Baxter&#x27;s website</subtitle>
+	<link href="https://hunterbaxter.github.io/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://hunterbaxter.github.io"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2022-05-23T00:00:00+00:00</updated>
+	<id>https://hunterbaxter.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>My Website</title>
+		<published>2022-05-23T00:00:00+00:00</published>
+		<updated>2022-05-23T00:00:00+00:00</updated>
+		<link href="https://hunterbaxter.github.io/blog/website/" type="text/html"/>
+		<id>https://hunterbaxter.github.io/blog/website/</id>
+		<content type="html">&lt;h1 id=&quot;motivation&quot;&gt;Motivation&lt;&#x2F;h1&gt;
+&lt;p&gt;Not using mainstream social media (Facebook, Twitter, Snapchat, Instagram) has often made keeping in touch with others difficult.
+A personal website allows me to give updates to my life publicly in a way that social media does not (maybe I will write a post one day).
+In addition, it will help me professionally to have a centralized location for my public work.&lt;&#x2F;p&gt;
+&lt;p&gt;The motivation to &lt;strong&gt;create&lt;&#x2F;strong&gt; my site rather than use a theme was to have the specific website I had in mine without any compromises and the knowledge to fix the errors that will inevitably occur.
+This article broadly describes a subset of the choices and technical details that went into making my website.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;planning&quot;&gt;Planning&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;prior-sites-frameworks-and-framework-choice&quot;&gt;Prior Sites, Frameworks, and Framework choice&lt;&#x2F;h2&gt;
+&lt;p&gt;In the past, I have used the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;academicpages&#x2F;academicpages.github.io&quot;&gt;Jekyll theme Academic Pages&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;adityatelange&#x2F;hugo-PaperMod&quot;&gt;Hugo PaperMod&lt;&#x2F;a&gt;.
+The reason I was not satisfied with these themes was:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;They were very mature, as a result, complicated. Since I am very inexperienced with front-end development, I found tweaking the sites thorny.&lt;&#x2F;li&gt;
+&lt;li&gt;The git repositories were outdated with the current version of {Jekyll, Hugo} when I was using it - breaking some features of the site (which I did not know how to fix)&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Studying the source code and learning the frameworks would mitigate the issue of not understanding the complexities of the themes, but instead, I chose to start from scratch (which has the benefit of learning basic HTML and CSS).&lt;&#x2F;p&gt;
+&lt;p&gt;Since I started from scratch, I had to pick a static site generator.
+Static site generators essentially all do the same thing, and unless you are doing something custom, choose one with a theme you like and has markdown rendering.
+However, I am doing something custom from scratch, so the decision would heavily impact my enjoyment of the process of building the site.
+I chose Zola because it is written in a language I know well, has fast live updates, and has a templating language like Jinja2.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;wireframes-and-site-design&quot;&gt;Wireframes and Site Design&lt;&#x2F;h2&gt;
+&lt;p&gt;In one of my classes at university, I remember working on a project that had a client, and our front-end developer made wireframes before any development.
+The rationality was that if there is a clear idea of the site&#x2F;look beforehand, progress moves in a clear direction with well-defined milestones.
+Since I am the client, I did not put a ton of effort into creating a polished wireframe and instead sketched my ideas onto a tablet quickly.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;website&#x2F;wireframe_header.png&quot; alt=&quot;header&#x2F;footer wireframe&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;website&#x2F;wireframe_home.png&quot; alt=&quot;home wireframe&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;website&#x2F;wireframe_about.png&quot; alt=&quot;about wireframe&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;website&#x2F;wireframe_contact.png&quot; alt=&quot;contact wireframe&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;website&#x2F;wireframe_publications.png&quot; alt=&quot;publications wireframe&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;website&#x2F;wireframe_software.png&quot; alt=&quot;software wireframe&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;website&#x2F;wireframe_blog.png&quot; alt=&quot;blog wireframe&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;website&#x2F;wireframe_tags.png&quot; alt=&quot;tags wireframe&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Header and Footer&lt;&#x2F;strong&gt;:
+For the header, it was important to me that it be responsive and collapse when viewed on a smaller screen.
+I will describe the responsive aspect in the technical section.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Home Page&lt;&#x2F;strong&gt;:
+I haven&#x27;t implemented this yet (the rest of the site was enough work), as I don&#x27;t have enough pictures I am comfortable using publicly,
+but the idea of having a more creative homepage would make my site a little more non-tech user appealing.
+Maybe one day, but not today. So, for now, the home page redirects to the about page.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;About and Contact Pages&lt;&#x2F;strong&gt;:
+The about page gives a short bio about me, and maybe later, it can have some additional sections that go into more details about a particular area of my life.
+It might also contain instructions for getting in contact with me or collaborating.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Professional Pages&lt;&#x2F;strong&gt;:
+Once I have built up a public portfolio I am comfortable displaying publicly; I will have separate pages of publications and software with slightly different requirements.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Blog Pages&lt;&#x2F;strong&gt;:
+For more informal content, I wanted to have a simple card design and the option to filter posts by tags.
+The nice thing about Zola is that each tag can have a unique RSS feed.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;aesthetics&quot;&gt;Aesthetics&lt;&#x2F;h2&gt;
+&lt;p&gt;Although unpopular in a digital format, I enjoy greyscale color palettes (with an occasional exception for code snippets).
+I also prefer the minimal designs.
+So, I went with simple higher contrast colors (#F5F5F5), clean designs, and my personal font family of choice: &lt;a href=&quot;https:&#x2F;&#x2F;www.ibm.com&#x2F;plex&#x2F;&quot;&gt;IBM Plex&lt;&#x2F;a&gt; (specifically &lt;a href=&quot;https:&#x2F;&#x2F;fonts.google.com&#x2F;specimen&#x2F;IBM+Plex+Sans&quot;&gt;Sans&lt;&#x2F;a&gt; &lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;).
+I believe this decision is sound because most users can and &lt;em&gt;should&lt;&#x2F;em&gt; (when possible) use reader view on their browser, which lets them control font, page color, and text size (some even have text-to-speech).
+So, my site aesthetic choices are just an opinionated default.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;technical-aspects&quot;&gt;Technical Aspects&lt;&#x2F;h1&gt;
+&lt;p&gt;I wanted my site to be responsive and mobile-first, as more and more people are viewing the web through mobile devices like tablets (again, people should use reader view, but I wanted to prepare for a less tech-savvy audience).
+Bootstrap is the most popular framework for responsive design, and &lt;a href=&quot;https:&#x2F;&#x2F;adidoks.org&#x2F;&quot;&gt;AdiDoks&lt;&#x2F;a&gt;, a theme I drew inspiration and code from, uses it.
+I was pleased with using Bootstrap, as there were countless examples online, and the documentation was manageable.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;header&quot;&gt;Header&lt;&#x2F;h2&gt;
+&lt;p&gt;The header of my site is a very simple bootstrap navbar.
+The notable features reside in the &lt;code&gt;navbar-toggler&lt;&#x2F;code&gt; class, where the navbar collapses when on a mobile device or small screen device.
+The collapsable header greatly enhanced the cellphone experience when testing.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;{% macros navbar() %}&lt;&#x2F;code&gt; defines a macro (just like a shortcode), allowing me to reuse the code on multiple pages without duplication.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#f5f5f5;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;{% macro navbar() %}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;lt;nav class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;navbar navbar-expand-sm navbar-light&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;gt;
+  &amp;lt;div class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;container&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;gt;
+    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;lt;a class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;navbar-brand&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;href=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;&#x2F;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;{{ config.title }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;lt;&#x2F;a&amp;gt;
+    &amp;lt;button class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;navbar-toggler&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;type=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;button&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;data-bs-toggle=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;collapse&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;data-bs-target=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;#toggleMobileMenu&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;aria-controls=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;toggleMobileMenu&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;aria-expanded=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;false&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;aria-label=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;Toggle navigation&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;gt;
+      &amp;lt;span class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;navbar-toggler-icon&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;gt;&amp;lt;&#x2F;span&amp;gt;
+    &amp;lt;&#x2F;button&amp;gt;
+    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;lt;div class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;collapse navbar-collapse&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;id=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;toggleMobileMenu&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;gt;
+      &amp;lt;ul class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;navbar-nav ms-auto text-center&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;gt;
+        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;lt;li class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;navbar-item&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;gt;&amp;lt;a class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;nav-link&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;href=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;&#x2F;menu_section&#x2F;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt; about &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;lt;&#x2F;a&amp;gt;&amp;lt;&#x2F;li&amp;gt;
+        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f8989;&quot;&gt;&amp;lt;!-- insert more sections --&amp;gt;
+      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;lt;&#x2F;ul&amp;gt;
+    &amp;lt;&#x2F;div&amp;gt;
+  &amp;lt;&#x2F;div&amp;gt;
+&amp;lt;&#x2F;nav&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;{% endmacro %}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;responsive-text&quot;&gt;Responsive Text&lt;&#x2F;h2&gt;
+&lt;p&gt;Although I always encourage people to use the reader view on their browser (I must have said this a couple of times by now haha), some may not know it exists.
+So, I need to account for this and make sure all of my text content looks good on any screen size.
+Bootstrap uses a &lt;a href=&quot;https:&#x2F;&#x2F;getbootstrap.com&#x2F;docs&#x2F;5.0&#x2F;layout&#x2F;grid&#x2F;&quot;&gt;Grid System&lt;&#x2F;a&gt;, and rather than trying to explain, I encourage readers to view the link (I am not very knowledgeable on it and couldn&#x27;t explain it well).
+The below code snippet contains much of the common code that wraps many elements on my site.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#f5f5f5;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;{% block content %}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;lt;div class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;container&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;gt;
+    &amp;lt;div class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;row justify-content-center&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;gt;
+      &amp;lt;div class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;col-md-12 col-lg-10 col-xxl-8&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;gt;
+        &amp;lt;h1&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;{{ page.title }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;lt;&#x2F;h1&amp;gt;
+        &amp;lt;p&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;{{ page.content | safe }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;lt;&#x2F;p&amp;gt;
+      &amp;lt;&#x2F;div&amp;gt;
+    &amp;lt;&#x2F;div&amp;gt;
+&amp;lt;&#x2F;div&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;{% endblock content %}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;&#x2F;h2&gt;
+&lt;p&gt;I wouldn&#x27;t say this was a complicated section to implement in HTML, as the &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;table-of-contents&#x2F;&quot;&gt;Zola Documentation&lt;&#x2F;a&gt; gives the exact necessary code,
+but I found that it didn&#x27;t look good unless inserted into a &lt;a href=&quot;https:&#x2F;&#x2F;getbootstrap.com&#x2F;docs&#x2F;5.0&#x2F;components&#x2F;accordion&#x2F;&quot;&gt;Bootstrap Accordion component&lt;&#x2F;a&gt; with some CSS to make it pleasing to the eyes.
+In addition, there were some annoying aspects of the accordion component when focused, so it took some digging to write the CSS to remove them.
+&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=E6x6jnYioHs&quot;&gt;This video&lt;&#x2F;a&gt; in particular was a good resource.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#f5f5f5;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;{% macro page_toc(page) %}
+{% if page.extra.toc %}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f8989;&quot;&gt;&amp;lt;!-- use accordion-flush to get rid of border --&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;lt;div class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;accordion&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;id=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;accordionToc&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;gt;
+  &amp;lt;div class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;accordion-item&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;gt;
+    &amp;lt;h2 class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;accordion-header&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;id=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;headingToc&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;gt;
+      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;lt;button class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;accordion-button collapsed&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;type=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;button&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;data-bs-toggle=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;collapse&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;data-bs-target=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;#collapseToc&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;aria-expanded=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;false&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;aria-controls=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;collapseToc&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;        Table of Contents
+      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;lt;&#x2F;button&amp;gt;
+    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;lt;&#x2F;h2&amp;gt;
+    &amp;lt;div id=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;collapseToc&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;accordion-collapse collapse&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;aria-labelledby=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;headingToc&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;data-bs-parent=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;#accordionToc&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;gt;
+      &amp;lt;div class=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;accordion-body&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;        {% for h1 in page.toc %}
+          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a href=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;{{ h1.permalink | safe }}&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt; {{ h1.title }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;lt;&#x2F;a&amp;gt;&amp;lt;&#x2F;li&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;    	  {% if h1.children %}
+    	  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;lt;ul&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;    	    {% for h2 in h1.children %}
+    	    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a href=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d07711;&quot;&gt;&amp;quot;{{ h2.permalink | safe }}&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;{{ h2.title }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f902a;&quot;&gt;&amp;lt;&#x2F;a&amp;gt;&amp;lt;&#x2F;li&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;    	    {% endfor %}
+    	  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;lt;&#x2F;ul&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;    	  {% endif %}
+    	  {% endfor %}
+      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6486ab;&quot;&gt;&amp;lt;&#x2F;div&amp;gt;
+    &amp;lt;&#x2F;div&amp;gt;
+  &amp;lt;&#x2F;div&amp;gt;
+&amp;lt;&#x2F;div&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;{% endif %}
+{% endmacro %}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;pre style=&quot;background-color:#f5f5f5;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#9b703f;&quot;&gt;.accordion-button &lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;{
+  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c5af75;&quot;&gt;background&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5597d6;&quot;&gt;$light-background-color&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;;
+  active-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c5af75;&quot;&gt;background&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5597d6;&quot;&gt;$light-background-color
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#9b703f;&quot;&gt;.accordion-button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c23f31;&quot;&gt;:not&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#9b703f;&quot;&gt;.collapsed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;) {
+    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c5af75;&quot;&gt;color&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#949175;&quot;&gt;inherit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;;
+    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c5af75;&quot;&gt;background&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5597d6;&quot;&gt;$light-background-color
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#9b703f;&quot;&gt;.accordion-button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c23f31;&quot;&gt;:focus &lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;{
+    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c5af75;&quot;&gt;box-shadow&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#949175;&quot;&gt;inherit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;;
+}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f8989;&quot;&gt;&#x2F;&#x2F; changes arrow color to black
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#9b703f;&quot;&gt;.accordion-button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c23f31;&quot;&gt;:not&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#9b703f;&quot;&gt;.collapsed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c23f31;&quot;&gt;::after &lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;{
+    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c5af75;&quot;&gt;filter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b39f04;&quot;&gt;brightness&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ca7840;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#72ab00;&quot;&gt;%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;)
+}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f8989;&quot;&gt;&#x2F;&#x2F; actual drop down color
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#9b703f;&quot;&gt;.accordion-item &lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;{
+  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c5af75;&quot;&gt;background&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5597d6;&quot;&gt;$light-background-color&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;;
+}
+
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;technical-challenges&quot;&gt;Technical Challenges&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;For some reason, markdown rendering has strange issues (tables, blockquotes) on my site, but no other example sites.
+Peculiar issues lead me to think I did something wrong, but it is plausible it is Zola&#x27;s fault (unlikely).
+However, I tested markdown on barebones Zola and Hugo sites, and issues only occur on Zola.
+I created a bit of custom CSS to mitigate the issues with blockquotes (for now, I haven&#x27;t dealt with tables).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre style=&quot;background-color:#f5f5f5;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;blockquote {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  border-left: 3px solid $fu-purple; &#x2F;&#x2F; fu is furman university
+}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;For footnotes, it also does not have redirects.
+Maybe Zola will add or fix these features in the future (they don&#x27;t bother me enough for me to implement).&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;I foresee having mild issues in the future with the depreciation of Bootstrap, and then I need to make a bunch of small annoying changes to upgrade to Bootstrap-{5+n}.
+Hopefully, this is in 5+ years because I don&#x27;t want to touch front-end source code for a long time (HTML and CSS are mind-numbing).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;markdown-features&quot;&gt;Markdown Features&lt;&#x2F;h2&gt;
+&lt;p&gt;This section shows what the markdown rendering features I care about are like,
+both for visualization and to test that website features don&#x27;t break.
+I made trivial CSS to modify the default look (colors primarily) for some features.
+Most of the examples are from Adidoks &lt;a href=&quot;https:&#x2F;&#x2F;adidoks.org&#x2F;blog&#x2F;markdown-syntax&#x2F;&quot;&gt;markdown syntax&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;adidoks.org&#x2F;blog&#x2F;math-typesetting&#x2F;&quot;&gt;math typesetting&lt;&#x2F;a&gt; guides.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;blockquote-without-attribution&quot;&gt;Blockquote without attribution&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+&lt;strong&gt;Note&lt;&#x2F;strong&gt; that you can use &lt;em&gt;Markdown syntax&lt;&#x2F;em&gt; within a blockquote.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h4 id=&quot;blockquote-with-attribution&quot;&gt;Blockquote with attribution&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;All men by nature desire to know.&lt;br&gt;
+― &lt;cite&gt;Aristotle&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;cite&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;other-elements-abbr-math-kbd-mark&quot;&gt;Other Elements — abbr, math, kbd, mark&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;abbr&quot;&gt;abbr&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;abbr title=&quot;Laugh Out Loud&quot;&gt;LOL&lt;&#x2F;abbr&gt; expands an abbreviation upon hovering.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;math&quot;&gt;math&lt;&#x2F;h4&gt;
+&lt;p&gt;Using &lt;a href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;&quot;&gt;KaTeX&lt;&#x2F;a&gt;, which is a subset of &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;TeX&quot;&gt;TeX&lt;&#x2F;a&gt;, math is rendered.&lt;&#x2F;p&gt;
+&lt;p&gt;
+Inline math: \((x_1 + x_2)^2 = x_1^2 + 2x_1x_2 + x_2^2\)
+&lt;&#x2F;p&gt;
+&lt;p&gt;Block math:
+$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;kbd&quot;&gt;kbd&lt;&#x2F;h4&gt;
+&lt;p&gt;Press &lt;kbd&gt;&lt;kbd&gt;CTRL&lt;&#x2F;kbd&gt;+&lt;kbd&gt;ALT&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Delete&lt;&#x2F;kbd&gt;&lt;&#x2F;kbd&gt; to end the
+session.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;mark&quot;&gt;mark&lt;&#x2F;h4&gt;
+&lt;p&gt;Most &lt;mark&gt;salamanders&lt;&#x2F;mark&gt; are nocturnal, and hunt for insects, worms, and
+other small creatures.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;hosting&quot;&gt;Hosting&lt;&#x2F;h2&gt;
+&lt;p&gt;Currently, I am using Github pages, but I plan to get a domain name and use another hosting service in the future.
+However, for now, I can&#x27;t justify the cost.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h1&gt;
+&lt;p&gt;I am happy with how the site turned out.
+It took &lt;em&gt;significantly&lt;&#x2F;em&gt; longer than expected, with many frustrating moments (particularly with CSS),
+but I think it was worth it to have my ideal public digital presence.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;The common consensus is that Sans-Serif is better for Serif on screens, and Serif is better than Sans-Serif on paper.
+I agree with this.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;&#x2F;sup&gt;
+&lt;p&gt;Example: The quote is the first sentence of Aristotle&#x27;s &lt;a href=&quot;http:&#x2F;&#x2F;classics.mit.edu&#x2F;Aristotle&#x2F;metaphysics.html&quot;&gt;Metaphysics&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+</content>
+	</entry>
+</feed>

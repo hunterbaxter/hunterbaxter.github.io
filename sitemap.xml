@@ -10,19 +10,11 @@
         <loc>https://hunterbaxter.github.io/blog/</loc>
     </url>
     <url>
-        <loc>https://hunterbaxter.github.io/blog/code/</loc>
-        <lastmod>2022-04-08T09:19:42+00:00</lastmod>
-    </url>
-    <url>
-        <loc>https://hunterbaxter.github.io/blog/markdown-syntax/</loc>
-        <lastmod>2022-04-23T00:00:00+00:00</lastmod>
-    </url>
-    <url>
-        <loc>https://hunterbaxter.github.io/blog/math/</loc>
-        <lastmod>2021-04-08T09:19:42+00:00</lastmod>
-    </url>
-    <url>
         <loc>https://hunterbaxter.github.io/blog/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://hunterbaxter.github.io/blog/website/</loc>
+        <lastmod>2022-05-23</lastmod>
     </url>
     <url>
         <loc>https://hunterbaxter.github.io/contact/</loc>
@@ -31,9 +23,9 @@
         <loc>https://hunterbaxter.github.io/tags/</loc>
     </url>
     <url>
-        <loc>https://hunterbaxter.github.io/tags/math/</loc>
+        <loc>https://hunterbaxter.github.io/tags/diy/</loc>
     </url>
     <url>
-        <loc>https://hunterbaxter.github.io/tags/test/</loc>
+        <loc>https://hunterbaxter.github.io/tags/tech/</loc>
     </url>
 </urlset>
