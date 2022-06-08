@@ -18,7 +18,7 @@
 A personal website allows me to give updates to my life publicly in a way that social media does not (maybe I will write a post one day).
 In addition, it will help me professionally to have a centralized location for my public work.&lt;&#x2F;p&gt;
 &lt;p&gt;The motivation to &lt;strong&gt;create&lt;&#x2F;strong&gt; my site rather than use a theme was to have the specific website I had in mine without any compromises and the knowledge to fix the errors that will inevitably occur.
-This article broadly describes a subset of the choices and technical details that went into making my website.&lt;&#x2F;p&gt;
+This article broadly describes a subset of the choices and &amp;quot;technical&amp;quot; details that went into making my website.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;planning&quot;&gt;Planning&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;prior-sites-frameworks-and-framework-choice&quot;&gt;Prior Sites, Frameworks, and Framework choice&lt;&#x2F;h2&gt;
 &lt;p&gt;In the past, I have used the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;academicpages&#x2F;academicpages.github.io&quot;&gt;Jekyll theme Academic Pages&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;adityatelange&#x2F;hugo-PaperMod&quot;&gt;Hugo PaperMod&lt;&#x2F;a&gt;.
@@ -33,7 +33,7 @@ Static site generators essentially all do the same thing, and unless you are doi
 However, I am doing something custom from scratch, so the decision would heavily impact my enjoyment of the process of building the site.
 I chose Zola because it is written in a language I know well, has fast live updates, and has a templating language like Jinja2.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;wireframes-and-site-design&quot;&gt;Wireframes and Site Design&lt;&#x2F;h2&gt;
-&lt;p&gt;In one of my classes at university, I remember working on a project that had a client, and our front-end developer made wireframes before any development.
+&lt;p&gt;In university, I remember working on a project that had a client, and our front-end developer made wireframes before any development.
 The rationality was that if there is a clear idea of the site&#x2F;look beforehand, progress moves in a clear direction with well-defined milestones.
 Since I am the client, I did not put a ton of effort into creating a polished wireframe and instead sketched my ideas onto a tablet quickly.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;hunterbaxter.github.io&#x2F;blog&#x2F;website&#x2F;wireframe_header.png&quot; alt=&quot;header&#x2F;footer wireframe&quot; &#x2F;&gt;
@@ -166,24 +166,27 @@ In addition, there were some annoying aspects of the accordion component when fo
 
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;technical-challenges&quot;&gt;Technical Challenges&lt;&#x2F;h2&gt;
 &lt;ul&gt;
-&lt;li&gt;For some reason, markdown rendering has strange issues (tables, blockquotes) on my site, but no other example sites.
+&lt;li&gt;
+&lt;p&gt;For some reason, markdown rendering has strange issues (tables, blockquotes) on my site, but no other example sites.
 Peculiar issues lead me to think I did something wrong, but it is plausible it is Zola&#x27;s fault (unlikely).
 However, I tested markdown on barebones Zola and Hugo sites, and issues only occur on Zola.
-I created a bit of custom CSS to mitigate the issues with blockquotes (for now, I haven&#x27;t dealt with tables).&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
+I created a bit of custom CSS to mitigate the issues with blockquotes (for now, I haven&#x27;t dealt with tables).&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#f5f5f5;&quot;&gt;
-&lt;code&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;blockquote {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-left: 15px;
-  border-left: 3px solid $fu-purple; &#x2F;&#x2F; fu is furman university
-}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;code&gt;&lt;span style=&quot;color:#cda869;&quot;&gt;blockquote &lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c5af75;&quot;&gt;margin-top&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ca7840;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#72ab00;&quot;&gt;px&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c5af75;&quot;&gt;margin-bottom&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ca7840;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#72ab00;&quot;&gt;px&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c5af75;&quot;&gt;padding-left&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ca7840;&quot;&gt;15&lt;&#x2F;span&gt;&lt;span style=&quot;color:#72ab00;&quot;&gt;px&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c5af75;&quot;&gt;border-left&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ca7840;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span style=&quot;color:#72ab00;&quot;&gt;px &lt;&#x2F;span&gt;&lt;span style=&quot;color:#949175;&quot;&gt;solid &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5597d6;&quot;&gt;$fu-purple&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7f8989;&quot;&gt;&#x2F;&#x2F; fu is furman university
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#1f1f1f;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;
 &lt;p&gt;For footnotes, it also does not have redirects.
 Maybe Zola will add or fix these features in the future (they don&#x27;t bother me enough for me to implement).&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;I foresee having mild issues in the future with the depreciation of Bootstrap, and then I need to make a bunch of small annoying changes to upgrade to Bootstrap-{5+n}.
-Hopefully, this is in 5+ years because I don&#x27;t want to touch front-end source code for a long time (HTML and CSS are mind-numbing).&lt;&#x2F;li&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;I foresee having mild issues in the future with the depreciation of Bootstrap, and then I need to make a bunch of small annoying changes to upgrade to Bootstrap-{5+n}.
+Hopefully, this is in 5+ years because I don&#x27;t want to touch front-end source code for a long time (HTML and CSS are mind-numbing).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;markdown-features&quot;&gt;Markdown Features&lt;&#x2F;h2&gt;
 &lt;p&gt;This section shows what the markdown rendering features I care about are like,
@@ -203,21 +206,24 @@ Most of the examples are from Adidoks &lt;a href=&quot;https:&#x2F;&#x2F;adidoks
 &lt;&#x2F;blockquote&gt;
 &lt;h3 id=&quot;other-elements-abbr-math-kbd-mark&quot;&gt;Other Elements — abbr, math, kbd, mark&lt;&#x2F;h3&gt;
 &lt;h4 id=&quot;abbr&quot;&gt;abbr&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;abbr title=&quot;Laugh Out Loud&quot;&gt;LOL&lt;&#x2F;abbr&gt; expands an abbreviation upon hovering.&lt;&#x2F;p&gt;
+&lt;p&gt;Gives definition of an abbreviation on hover.&lt;&#x2F;p&gt;
+&lt;p&gt;Example: &lt;abbr title=&quot;Laugh Out Loud&quot;&gt;LOL&lt;&#x2F;abbr&gt;&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;math&quot;&gt;math&lt;&#x2F;h4&gt;
 &lt;p&gt;Using &lt;a href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;&quot;&gt;KaTeX&lt;&#x2F;a&gt;, which is a subset of &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;TeX&quot;&gt;TeX&lt;&#x2F;a&gt;, math is rendered.&lt;&#x2F;p&gt;
 &lt;p&gt;
-Inline math: \((x_1 + x_2)^2 = x_1^2 + 2x_1x_2 + x_2^2\)
+Example Inline math: \((x_1 + x_2)^2 = x_1^2 + 2x_1x_2 + x_2^2\)
 &lt;&#x2F;p&gt;
-&lt;p&gt;Block math:
+&lt;p&gt;Example Block math:
 $$
 \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
 $$&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;kbd&quot;&gt;kbd&lt;&#x2F;h4&gt;
-&lt;p&gt;Press &lt;kbd&gt;&lt;kbd&gt;CTRL&lt;&#x2F;kbd&gt;+&lt;kbd&gt;ALT&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Delete&lt;&#x2F;kbd&gt;&lt;&#x2F;kbd&gt; to end the
+&lt;p&gt;Usually for keyboard input, but also is just a nice way to have coloring.&lt;&#x2F;p&gt;
+&lt;p&gt;Example: Press &lt;kbd&gt;&lt;kbd&gt;CTRL&lt;&#x2F;kbd&gt;+&lt;kbd&gt;ALT&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Delete&lt;&#x2F;kbd&gt;&lt;&#x2F;kbd&gt; to end the
 session.&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;mark&quot;&gt;mark&lt;&#x2F;h4&gt;
-&lt;p&gt;Most &lt;mark&gt;salamanders&lt;&#x2F;mark&gt; are nocturnal, and hunt for insects, worms, and
+&lt;p&gt;Highlights text essentially.
+Most &lt;mark&gt;salamanders&lt;&#x2F;mark&gt; are nocturnal, and hunt for insects, worms, and
 other small creatures.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;hosting&quot;&gt;Hosting&lt;&#x2F;h2&gt;
 &lt;p&gt;Currently, I am using Github pages, but I plan to get a domain name and use another hosting service in the future.
@@ -228,7 +234,7 @@ It took &lt;em&gt;significantly&lt;&#x2F;em&gt; longer than expected, with many 
 but I think it was worth it to have my ideal public digital presence.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
-&lt;p&gt;The common consensus is that Sans-Serif is better for Serif on screens, and Serif is better than Sans-Serif on paper.
+&lt;p&gt;The common consensus is that Sans-Serif &amp;gt; Serif on screens, and Serif &amp;gt; Sans-Serif on paper.
 I agree with this.&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
 &lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;&#x2F;sup&gt;

@@ -70,7 +70,7 @@
     
 </small><p>
 
-        <p>the design choices and technical details of my site</p>
+        <p>the design choices and details of my site</p>
         
 
 <!-- use accordion-flush to get rid of border -->
@@ -133,7 +133,7 @@
 A personal website allows me to give updates to my life publicly in a way that social media does not (maybe I will write a post one day).
 In addition, it will help me professionally to have a centralized location for my public work.</p>
 <p>The motivation to <strong>create</strong> my site rather than use a theme was to have the specific website I had in mine without any compromises and the knowledge to fix the errors that will inevitably occur.
-This article broadly describes a subset of the choices and technical details that went into making my website.</p>
+This article broadly describes a subset of the choices and &quot;technical&quot; details that went into making my website.</p>
 <h1 id="planning">Planning</h1>
 <h2 id="prior-sites-frameworks-and-framework-choice">Prior Sites, Frameworks, and Framework choice</h2>
 <p>In the past, I have used the <a href="https://github.com/academicpages/academicpages.github.io">Jekyll theme Academic Pages</a> and <a href="https://github.com/adityatelange/hugo-PaperMod">Hugo PaperMod</a>.
@@ -148,7 +148,7 @@ Static site generators essentially all do the same thing, and unless you are doi
 However, I am doing something custom from scratch, so the decision would heavily impact my enjoyment of the process of building the site.
 I chose Zola because it is written in a language I know well, has fast live updates, and has a templating language like Jinja2.</p>
 <h2 id="wireframes-and-site-design">Wireframes and Site Design</h2>
-<p>In one of my classes at university, I remember working on a project that had a client, and our front-end developer made wireframes before any development.
+<p>In university, I remember working on a project that had a client, and our front-end developer made wireframes before any development.
 The rationality was that if there is a clear idea of the site/look beforehand, progress moves in a clear direction with well-defined milestones.
 Since I am the client, I did not put a ton of effort into creating a polished wireframe and instead sketched my ideas onto a tablet quickly.</p>
 <p><img src="https://hunterbaxter.github.io/blog/website/wireframe_header.png" alt="header/footer wireframe" />
@@ -281,24 +281,27 @@ In addition, there were some annoying aspects of the accordion component when fo
 
 </span></code></pre><h2 id="technical-challenges">Technical Challenges</h2>
 <ul>
-<li>For some reason, markdown rendering has strange issues (tables, blockquotes) on my site, but no other example sites.
+<li>
+<p>For some reason, markdown rendering has strange issues (tables, blockquotes) on my site, but no other example sites.
 Peculiar issues lead me to think I did something wrong, but it is plausible it is Zola's fault (unlikely).
 However, I tested markdown on barebones Zola and Hugo sites, and issues only occur on Zola.
-I created a bit of custom CSS to mitigate the issues with blockquotes (for now, I haven't dealt with tables).</li>
-</ul>
+I created a bit of custom CSS to mitigate the issues with blockquotes (for now, I haven't dealt with tables).</p>
 <pre style="background-color:#f5f5f5;">
-<code><span style="color:#1f1f1f;">blockquote {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-left: 15px;
-  border-left: 3px solid $fu-purple; // fu is furman university
-}
-</span></code></pre>
+<code><span style="color:#cda869;">blockquote </span><span style="color:#1f1f1f;">{
+</span><span style="color:#1f1f1f;">  </span><span style="color:#c5af75;">margin-top</span><span style="color:#1f1f1f;">: </span><span style="color:#ca7840;">10</span><span style="color:#72ab00;">px</span><span style="color:#1f1f1f;">;
+</span><span style="color:#1f1f1f;">  </span><span style="color:#c5af75;">margin-bottom</span><span style="color:#1f1f1f;">: </span><span style="color:#ca7840;">10</span><span style="color:#72ab00;">px</span><span style="color:#1f1f1f;">;
+</span><span style="color:#1f1f1f;">  </span><span style="color:#c5af75;">padding-left</span><span style="color:#1f1f1f;">: </span><span style="color:#ca7840;">15</span><span style="color:#72ab00;">px</span><span style="color:#1f1f1f;">;
+</span><span style="color:#1f1f1f;">  </span><span style="color:#c5af75;">border-left</span><span style="color:#1f1f1f;">: </span><span style="color:#ca7840;">3</span><span style="color:#72ab00;">px </span><span style="color:#949175;">solid </span><span style="color:#5597d6;">$fu-purple</span><span style="color:#1f1f1f;">; </span><span style="color:#7f8989;">// fu is furman university
+</span><span style="color:#1f1f1f;">}
+</span></code></pre></li>
+<li>
 <p>For footnotes, it also does not have redirects.
 Maybe Zola will add or fix these features in the future (they don't bother me enough for me to implement).</p>
-<ul>
-<li>I foresee having mild issues in the future with the depreciation of Bootstrap, and then I need to make a bunch of small annoying changes to upgrade to Bootstrap-{5+n}.
-Hopefully, this is in 5+ years because I don't want to touch front-end source code for a long time (HTML and CSS are mind-numbing).</li>
+</li>
+<li>
+<p>I foresee having mild issues in the future with the depreciation of Bootstrap, and then I need to make a bunch of small annoying changes to upgrade to Bootstrap-{5+n}.
+Hopefully, this is in 5+ years because I don't want to touch front-end source code for a long time (HTML and CSS are mind-numbing).</p>
+</li>
 </ul>
 <h2 id="markdown-features">Markdown Features</h2>
 <p>This section shows what the markdown rendering features I care about are like,
@@ -318,21 +321,24 @@ Most of the examples are from Adidoks <a href="https://adidoks.org/blog/markdown
 </blockquote>
 <h3 id="other-elements-abbr-math-kbd-mark">Other Elements — abbr, math, kbd, mark</h3>
 <h4 id="abbr">abbr</h4>
-<p><abbr title="Laugh Out Loud">LOL</abbr> expands an abbreviation upon hovering.</p>
+<p>Gives definition of an abbreviation on hover.</p>
+<p>Example: <abbr title="Laugh Out Loud">LOL</abbr></p>
 <h4 id="math">math</h4>
 <p>Using <a href="https://katex.org/">KaTeX</a>, which is a subset of <a href="https://en.wikipedia.org/wiki/TeX">TeX</a>, math is rendered.</p>
 <p>
-Inline math: \((x_1 + x_2)^2 = x_1^2 + 2x_1x_2 + x_2^2\)
+Example Inline math: \((x_1 + x_2)^2 = x_1^2 + 2x_1x_2 + x_2^2\)
 </p>
-<p>Block math:
+<p>Example Block math:
 $$
 \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
 $$</p>
 <h4 id="kbd">kbd</h4>
-<p>Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the
+<p>Usually for keyboard input, but also is just a nice way to have coloring.</p>
+<p>Example: Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the
 session.</p>
 <h4 id="mark">mark</h4>
-<p>Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and
+<p>Highlights text essentially.
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and
 other small creatures.</p>
 <h2 id="hosting">Hosting</h2>
 <p>Currently, I am using Github pages, but I plan to get a domain name and use another hosting service in the future.
@@ -343,7 +349,7 @@ It took <em>significantly</em> longer than expected, with many frustrating momen
 but I think it was worth it to have my ideal public digital presence.</p>
 <hr />
 <div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
-<p>The common consensus is that Sans-Serif is better for Serif on screens, and Serif is better than Sans-Serif on paper.
+<p>The common consensus is that Sans-Serif &gt; Serif on screens, and Serif &gt; Sans-Serif on paper.
 I agree with this.</p>
 </div>
 <div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
